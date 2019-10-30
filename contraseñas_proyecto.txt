@@ -1,0 +1,19 @@
+user: superusuario
+pass: superusuario123
+md5:  2e6862d634f970e7970460d7bbd10529
+
+user: juanma
+pass: juanma123
+md5:  6b45be7910410293e64def2272ff6cd7
+
+user: carlos
+pass: carlos123
+md5:  9ad48828b0955513f7cf0f7f6510c8f8
+
+user: dani
+pass: dani123
+md5:  6e7a0c9b49cadd9228f1170dbf7dff94
+
+user: jose
+pass: jose123
+md5:  90e528618534d005b1a7e7b7a367813f
