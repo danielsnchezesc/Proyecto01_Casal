@@ -8,13 +8,13 @@
 </head>
 <body>
 	<h2>Insertar usuarios</h2>
-	<p class="mensaje1" id="mensaje1"></p>
-	<form action="inserts_usuarios.php" method="POST" name="formulario1" enctype="multipart/form-data" onsubmit="return Validacioni()">
+	<p class="mensaje" id="mensaje"></p>
+	<form action="comprobarusuarios.php" method="POST" name="formulario1" enctype="multipart/form-data" onsubmit="return login()">
 		<label for="user" class="boton">Usuario:</label>
-		<input type="string" name="user" id="user1"><br><br>
+		<input type="string" name="user" id="user" default=""><br><br>
 		<label for="pwd" class="boton">Contraseña:</label>
-		<input type="password" name="pwd" id="pwd1">
-		<input type="submit" name="registro" class="boton">
+		<input type="password" name="pwd" id="pwd">
+		<input type="submit" name="registro" default="" class="boton">
 	</form>
 </div>
 </body>

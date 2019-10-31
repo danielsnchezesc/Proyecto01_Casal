@@ -1,6 +1,6 @@
 <?php
 //Decimos el nombre de la base de datos
-	$db_nom="";
+	$db_nom="proyecto_casal";
 	//decimos que conecte utilizando los valores del registro
 	$conn=mysqli_connect("localhost","root","",$db_nom);
 	//si falla la conexion nos manda un error
