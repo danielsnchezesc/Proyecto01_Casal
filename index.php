@@ -8,7 +8,7 @@
 <body>
 	<?php 
 	session_start();
-	if (!$_SESSION['login_user']) {
+	if (!isset($_SESSION['login_user'])) {
 		header("location:login.php");
 	}
 	?>
@@ -37,7 +37,17 @@
 	</div>
 	<div id="recursos">
 		<a href="">Salas</a>
+		<div>
+			<?php 
+			include "salas.php";
+			?>
+		</div>
 		<a href="">Dispositivos</a>
+			<?php
+			include "moviles.php";
+			include "portatiles.php";
+			include "proyectores.php";
+			?>
 	</div>
 </body>
 </html>
