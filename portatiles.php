@@ -8,14 +8,25 @@ while ($casos=mysqli_fetch_array($exe)) {
 	}else if ($casos[1]="2") {
 		$estado="Gastado";
 	}else if ($casos[1]="3") {
+
 		$estado="En reparacion";
+
 	}
+
 	if ($casos[2]="1") {
+
 		$reserva="En uso";
+
 	}else if ($casos[2]="2") {
+
 		$reserva="Disponible";
+
 	}
+
 	echo "Portatil : ".$casos[0]." | Estado de la sala: ".$estado." | Disponibilidad: ".$reserva;
+
 	echo "<br>";
+
 }
+
 ?>
