@@ -23,11 +23,11 @@ while ($value=mysqli_fetch_array($resultado)) {
 echo "<option value='".$value['id_Inventario']."'>".$value['nombre_Inventario']."</option>";
 
 }
-
 ?>
-
 </select>
-
+<br><br>
+<textarea name="descripcion" rows="10" cols="30"></textarea>
+<br>
 <input type="submit" name="submit">
 
 </form>
