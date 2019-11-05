@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-11-2019 a las 17:27:51
+-- Tiempo de generación: 05-11-2019 a las 18:18:03
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.1.28
 
@@ -64,24 +64,24 @@ CREATE TABLE `inventario` (
 --
 
 INSERT INTO `inventario` (`id_Inventario`, `nombre_Inventario`, `tipo_Inventario`, `descripcion_Inventario`, `estado_Inventario`, `reservado_Inventario`, `descripcion_estado_inventario`) VALUES
-(1, 'SalaMultidisciplinar1', 'Sala', 'Sala multidisciplinar planta 0', 3, 2, 'wqed'),
-(2, 'SalaMultidisciplinar2', 'Sala', 'Sala multidisciplinar planta 1', 3, 2, 'se ha fundido la luz.'),
-(3, 'SalaMultidisciplinar3', 'Sala', 'Sala multidisciplinar planta 2', 1, 2, NULL),
-(4, 'SalaMultidisciplinar4', 'Sala', 'Sala multidisciplinar planta 3', 1, 2, NULL),
-(5, 'SalaInformatica1', 'Sala', 'Sala informática principal', 3, 2, NULL),
-(6, 'SalaInformatica2', 'Sala', 'Sala informática planta 2', 1, 2, NULL),
-(7, 'TallerCocina', 'Sala', 'Taller de cocina', 2, 2, NULL),
-(8, 'DespachoEntrevistas1', 'Sala', 'Despacho para entrevistas principal', 1, 2, NULL),
-(9, 'DespachoEntrevistas2', 'Sala', 'Despacho para entrevistas planta 1', 1, 2, NULL),
-(10, 'SalonDeActos', 'Sala', 'Salon de actos', 1, 2, NULL),
-(11, 'SalaDeReuniones', 'Sala', 'Sala de reuniones', 3, 2, NULL),
-(12, 'Proyector1', 'Proyector', 'Proyector blanco', 1, 2, NULL),
-(13, 'Proyector2', 'Proyector', 'Proyector negro', 1, 2, NULL),
-(14, 'Portatil1', 'Portatil', 'Portatil marca HP', 3, 2, 'La bateria dura muy poco'),
-(15, 'Portatil2', 'Portatil', 'Portatil marca Asus', 3, 2, NULL),
-(16, 'Portatil3', 'Portatil', 'Portatil marca Lenovo', 1, 2, NULL),
-(17, 'Móvil1', 'Móvil', 'Teléfono móvil IOS', 1, 2, NULL),
-(18, 'Móvil2', 'Móvil', 'Teléfono móvil Android', 3, 2, 'la pantalla parpadea');
+(1, 'SalaMultidisciplinar1', 'Sala', 'Sala multidisciplinar planta 0', 1, 2, 'Buen estado'),
+(2, 'SalaMultidisciplinar2', 'Sala', 'Sala multidisciplinar planta 1', 1, 2, 'Buen estado'),
+(3, 'SalaMultidisciplinar3', 'Sala', 'Sala multidisciplinar planta 2', 3, 2, 'Se ha fundido la luz'),
+(4, 'SalaMultidisciplinar4', 'Sala', 'Sala multidisciplinar planta 3', 1, 2, 'Buen estado'),
+(5, 'SalaInformatica1', 'Sala', 'Sala informática principal', 1, 2, 'Buen estado'),
+(6, 'SalaInformatica2', 'Sala', 'Sala informática planta 2', 3, 2, 'No funciona internet'),
+(7, 'TallerCocina', 'Sala', 'Taller de cocina', 1, 2, 'Buen estado'),
+(8, 'DespachoEntrevistas1', 'Sala', 'Despacho para entrevistas principal', 1, 2, 'Buen estado'),
+(9, 'DespachoEntrevistas2', 'Sala', 'Despacho para entrevistas planta 1', 1, 2, 'Buen estado'),
+(10, 'SalonDeActos', 'Sala', 'Salon de actos', 3, 2, 'se han roto 2 butacas'),
+(11, 'SalaDeReuniones', 'Sala', 'Sala de reuniones', 1, 2, 'Buen estado'),
+(12, 'Proyector1', 'Proyector', 'Proyector blanco', 3, 2, 'hay interferencias'),
+(13, 'Proyector2', 'Proyector', 'Proyector negro', 2, 2, 'Gastado'),
+(14, 'Portatil1', 'Portatil', 'Portatil marca HP', 1, 2, 'Buen estado'),
+(15, 'Portatil2', 'Portatil', 'Portatil marca Asus', 2, 2, 'Gastado'),
+(16, 'Portatil3', 'Portatil', 'Portatil marca Lenovo', 3, 2, 'No funciona el teclado'),
+(17, 'Móvil1', 'Móvil', 'Teléfono móvil IOS', 1, 2, 'Buen estado'),
+(18, 'Móvil2', 'Móvil', 'Teléfono móvil Android', 3, 2, 'La bateria dura muy poco');
 
 -- --------------------------------------------------------
 
