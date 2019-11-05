@@ -9,8 +9,6 @@ mysqli_query($conn, $y);
 
 $y = "UPDATE inventario SET descripcion_estado_Inventario='$descripcion' WHERE id_inventario='$id'";
 mysqli_query($conn, $y);
+
+header("Location: incidencias.php");
 ?>
-
-<p>Se ha marcado como estropeado</p>
-
-<a href="incidencias.php">Volver</a>
