@@ -69,15 +69,19 @@
 
 			</form>
 			<br><br>
+
+				<?php 
+				$nombre=$_SESSION['id'];
+
+				?>
+
 			<a>Incidencias activas:</a>
 			<div id="recursos">
 
 				<?php 
-				$nombre=$_SESSION['login_user'];
-				if ($nombre='superusuario') {
-						include "incidencias_super.php";	
-				}
-		
+			if ($nombre==1) {
+			include "incidencias_super.php";
+                 }
 				?>
 
 
