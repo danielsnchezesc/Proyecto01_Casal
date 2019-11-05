@@ -8,19 +8,24 @@ if (!$_POST["user"] && !$_POST["pwd"]) {
 $name=$_POST["user"];
 $pwd=$_POST["pwd"];
 $encript=md5($pwd);
-$consulta="select * from personal where contrasena_personal='$encript' and usuario_personal='$name'";
+$consulta="SELECT * FROM personal WHERE contrasena_personal='$encript' AND usuario_personal='$name'";
 $consulta=mysqli_query($conn,$consulta);
 if(mysqli_num_rows($consulta) && !empty($consulta)){
 	echo "El usuario es correcto";
 	$row=mysqli_fetch_array($consulta);
 	session_start();
-	$_SESSION['id']=$row['id'];
+	$_SESSION['id']=$row['id_personal'];
 	$_SESSION['login_user']=$name;
 	echo "$name";
-	//header("location:index.php");
+
+	if ($row['id_Personal']==1) {
+	header("location:index_superusuario.php");
+	}else{
+	header("location:index.php");
+}
 }else{
 	echo "El usuario es incorrecto";
-	//echo "<a href='home.php'>Volver a inicio</a>";
+	echo "<a href='login.php'>Volver a inicio</a>";
 }
 }
 ?>
