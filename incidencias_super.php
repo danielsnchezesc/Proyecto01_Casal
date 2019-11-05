@@ -1,37 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Incidencias</title>
-	<meta charset="utf-8">	
-	<link rel="stylesheet" type="text/css" href="estilos.css">
-</head>
-<body>
-
-<h1>Incidencias</h1>
-<h3>estropeado</h3>
-<form action="desc_incidencias_super.php" method="POST">
-<select name="opcion">
-
-
 <?php
 
 include "conexion.php";
-
 $z= "SELECT * FROM inventario WHERE estado_Inventario='3'";
 
 $resultado =mysqli_query($conn, $z);
 
 while ($value=mysqli_fetch_array($resultado)) {
 
-echo "<option value='".$value['id_Inventario']."'>".$value['nombre_Inventario']."</option>";
+?>
+<form action="incidencias_super.proc.php" method="POST">
+<?php
+
+echo "<h2>".$value['nombre_Inventario']."</h2>";
+echo "<p>".$value['descripcion_estado_inventario']."</p>";
+
+echo "<input type='hidden' name='opcion' value='".$value['id_Inventario']."'>";
+echo "<input type='submit' value='Resolver Incidencia'>";
+
+?>
+</form>
+<?php
 
 }
 
 ?>
-
-</select>
-
-<input type="submit" name="submit">
-</form>
-</body>
-</html>
