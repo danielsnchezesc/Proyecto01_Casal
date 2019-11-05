@@ -9,11 +9,12 @@
 
 <h1>Incidencias</h1>
 <h3>estropeado</h3>
-<form action="incidencias_super.proc.php" method="POST">
+<form action="desc_incidencias_super.php" method="POST">
 <select name="opcion">
 
 
 <?php
+
 include "conexion.php";
 
 $z= "SELECT * FROM inventario WHERE estado_Inventario='3'";
