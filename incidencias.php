@@ -72,14 +72,13 @@
 
 				<?php 
 				$nombre=$_SESSION['id'];
-
+			if ($nombre==1) {
 				?>
 
 			<a>Incidencias activas:</a>
 			<div id="recursos">
 
 				<?php 
-			if ($nombre==1) {
 			include "incidencias_super.php";
                  }
 				?>
