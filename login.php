@@ -2,17 +2,16 @@
 <html>
 <head>
 	<title>Inventario casal</title>
-	<link rel="stylesheet" type="text/css" href="login.css">
+	<link rel="stylesheet" type="text/css" href="estilos.css">
 	<meta charset="UTF-8">
 	<script type="text/javascript" src="javascript.js"></script>
 </head>
 <body>
-
 	<div class="contenedor">
 		<div class="is">
 		<h3>Iniciar Sesión</h3>
 		</div><br>
-
+		<p style="margin-left: 35%;" class="mensaje" id="mensaje"></p>
 		<div class="form">
 		<form action="comprobarusuarios.php" method="POST" name="formulario1" enctype="multipart/form-data" onsubmit="return login()">
 			<label for="user" class="boton">Usuario:</label><br>
@@ -23,7 +22,6 @@
 		</form>
 		</div>
 	</div>
-
 </div>
 </body>
 </html>

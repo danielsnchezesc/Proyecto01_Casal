@@ -15,10 +15,12 @@
 	?>
 	<div class="general">
 	 	<div id="menu">
-	 		 <a href="index.html">Reservar</a>
-	 		 <a href="liberarrecursos.html">Liberar Recursos</a>
-	 		 <a href="inforecursos.html">Información Recursos</a>
-	 		 <a class="active" href="incidencias.html">Incidencias</a>
+	 		 <a class="active" href="index.php">Informacion Inventario</a>
+	 		 <a href="reservas.php">Reservar</a>
+	 		 <a href="liberarecursos.php">Liberar Recursos</a>
+	 		 <a href="objetosenincidencia.php">Objetos en Incidencia</a>
+	 		 <a href="hreservas.php">Historial de Reservas</a>
+	 		 <a href="incidencias.php">Incidencias</a>
 		</div>
 
 		<div class="derecha">
@@ -71,7 +73,8 @@
 			<div id="recursos">
 
 				<?php 
-				if ($_SESSION['login_user']='superusuario') {
+				$nombre=$_SESSION['login_user'];
+				if ($nombre='superusuario') {
 						include "incidencias_super.php";	
 				}
 		

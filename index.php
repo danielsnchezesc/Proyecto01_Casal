@@ -8,16 +8,19 @@
 <body>
 	<?php 
 	session_start();
+	$id=($_SESSION['id']);
 	if (!isset($_SESSION['login_user'])) {
 		header("location:login.php");
 	}
 	?>
 	<div class="general">
 	 	<div id="menu">
-	 		 <a class="active" href="index.html">Reservar</a>
-	 		 <a href="liberarrecursos.html">Liberar Recursos</a>
-	 		 <a href="inforecursos.html">Información Recursos</a>
-	 		 <a href="incidencias.html">Incidencias</a>
+	 		 <a class="active" href="index.php">Informacion Inventario</a>
+	 		 <a href="reservas.php">Reservar</a>
+	 		 <a href="liberarecursos.php">Liberar Recursos</a>
+	 		 <a href="objetosenincidencia.php">Objetos en Incidencia</a>
+	 		 <a href="hreservas.php">Historial de Reservas</a>
+	 		 <a href="incidencias.php">Incidencias</a>
 		</div>
 		<div class="derecha">
 			<?php
@@ -45,9 +48,12 @@
 		<a href="">Dispositivos</a>
 			<?php
 			include "moviles.php";
+			echo "<br>";
 			include "portatiles.php";
+			echo "<br>";
 			include "proyectores.php";
 			?>
 	</div>
 </body>
 </html>
+

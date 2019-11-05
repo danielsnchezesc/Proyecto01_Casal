@@ -4,7 +4,7 @@ $consulta="select nombre_Inventario from inventario where reservado_Inventario='
 $exe=mysqli_query($conn,$consulta);
 while ($casos=mysqli_fetch_array($exe)) {
 	echo $casos[0];
-	$sala=$casos[0];
-	echo "<a href=''>Reservar</a><br>";	
+	$inventario=$casos[0];
+	echo "<a href='hacereserva.php?inventario=$inventario'>Reservar</a><br>";	
 }
 ?>

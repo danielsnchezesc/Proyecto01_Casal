@@ -6,11 +6,7 @@
 -- Tiempo de generación: 05-11-2019 a las 18:18:03
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.1.28
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
+create database proyecto_casal;
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
