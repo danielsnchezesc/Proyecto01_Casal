@@ -3,10 +3,14 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-11-2019 a las 18:18:03
+-- Tiempo de generación: 06-11-2019 a las 19:37:58
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.1.28
-create database proyecto_casal;
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -21,23 +25,17 @@ create database proyecto_casal;
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `estado`
+-- Estructura de tabla para la tabla `incidencias`
 --
 
-CREATE TABLE `estado` (
-  `id_Estado` int(10) NOT NULL,
-  `estado` varchar(20) NOT NULL,
-  `descripcion_Estado` text NOT NULL
+CREATE TABLE `incidencias` (
+  `id_Incidencia` int(10) NOT NULL,
+  `fecha_inicio_Incidencia` date NOT NULL,
+  `fecha_fin_Incidencia` date NOT NULL,
+  `hora_inicio_Incidencia` varchar(5) NOT NULL,
+  `hora_fin_Incidencia` varchar(5) NOT NULL,
+  `descripcion_Incidencia` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `estado`
---
-
-INSERT INTO `estado` (`id_Estado`, `estado`, `descripcion_Estado`) VALUES
-(1, 'Buen estado', 'Este artículo está en buen estado.'),
-(2, 'Gastado', 'Este artículo está gastado.'),
-(3, 'Estropeado', 'Este artículo está estropeado.');
 
 -- --------------------------------------------------------
 
@@ -46,38 +44,38 @@ INSERT INTO `estado` (`id_Estado`, `estado`, `descripcion_Estado`) VALUES
 --
 
 CREATE TABLE `inventario` (
-  `id_Inventario` int(10) NOT NULL,
+  `id_Inventario` int(2) NOT NULL,
   `nombre_Inventario` varchar(35) NOT NULL,
   `tipo_Inventario` varchar(20) NOT NULL,
   `descripcion_Inventario` varchar(50) NOT NULL,
-  `estado_Inventario` int(10) NOT NULL,
-  `reservado_Inventario` int(10) NOT NULL,
-  `descripcion_estado_inventario` text
+  `estado_Inventario` int(1) NOT NULL,
+  `reservado_Inventario` int(1) NOT NULL,
+  `incidencias_Inventario` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `inventario`
 --
 
-INSERT INTO `inventario` (`id_Inventario`, `nombre_Inventario`, `tipo_Inventario`, `descripcion_Inventario`, `estado_Inventario`, `reservado_Inventario`, `descripcion_estado_inventario`) VALUES
-(1, 'SalaMultidisciplinar1', 'Sala', 'Sala multidisciplinar planta 0', 1, 2, 'Buen estado'),
-(2, 'SalaMultidisciplinar2', 'Sala', 'Sala multidisciplinar planta 1', 1, 2, 'Buen estado'),
-(3, 'SalaMultidisciplinar3', 'Sala', 'Sala multidisciplinar planta 2', 3, 2, 'Se ha fundido la luz'),
-(4, 'SalaMultidisciplinar4', 'Sala', 'Sala multidisciplinar planta 3', 1, 2, 'Buen estado'),
-(5, 'SalaInformatica1', 'Sala', 'Sala informática principal', 1, 2, 'Buen estado'),
-(6, 'SalaInformatica2', 'Sala', 'Sala informática planta 2', 3, 2, 'No funciona internet'),
-(7, 'TallerCocina', 'Sala', 'Taller de cocina', 1, 2, 'Buen estado'),
-(8, 'DespachoEntrevistas1', 'Sala', 'Despacho para entrevistas principal', 1, 2, 'Buen estado'),
-(9, 'DespachoEntrevistas2', 'Sala', 'Despacho para entrevistas planta 1', 1, 2, 'Buen estado'),
-(10, 'SalonDeActos', 'Sala', 'Salon de actos', 3, 2, 'se han roto 2 butacas'),
-(11, 'SalaDeReuniones', 'Sala', 'Sala de reuniones', 1, 2, 'Buen estado'),
-(12, 'Proyector1', 'Proyector', 'Proyector blanco', 3, 2, 'hay interferencias'),
-(13, 'Proyector2', 'Proyector', 'Proyector negro', 2, 2, 'Gastado'),
-(14, 'Portatil1', 'Portatil', 'Portatil marca HP', 1, 2, 'Buen estado'),
-(15, 'Portatil2', 'Portatil', 'Portatil marca Asus', 2, 2, 'Gastado'),
-(16, 'Portatil3', 'Portatil', 'Portatil marca Lenovo', 3, 2, 'No funciona el teclado'),
-(17, 'Móvil1', 'Móvil', 'Teléfono móvil IOS', 1, 2, 'Buen estado'),
-(18, 'Móvil2', 'Móvil', 'Teléfono móvil Android', 3, 2, 'La bateria dura muy poco');
+INSERT INTO `inventario` (`id_Inventario`, `nombre_Inventario`, `tipo_Inventario`, `descripcion_Inventario`, `estado_Inventario`, `reservado_Inventario`, `incidencias_Inventario`) VALUES
+(1, 'SalaMultidisciplinar1', 'Sala', 'Sala multidisciplinar planta 0', 3, 2, 0),
+(2, 'SalaMultidisciplinar2', 'Sala', 'Sala multidisciplinar planta 1', 1, 2, 0),
+(3, 'SalaMultidisciplinar3', 'Sala', 'Sala multidisciplinar planta 2', 3, 2, 0),
+(4, 'SalaMultidisciplinar4', 'Sala', 'Sala multidisciplinar planta 3', 1, 2, 0),
+(5, 'SalaInformatica1', 'Sala', 'Sala informática principal', 1, 2, 0),
+(6, 'SalaInformatica2', 'Sala', 'Sala informática planta 2', 3, 2, 0),
+(7, 'TallerCocina', 'Sala', 'Taller de cocina', 1, 2, 0),
+(8, 'DespachoEntrevistas1', 'Sala', 'Despacho para entrevistas principal', 1, 1, 0),
+(9, 'DespachoEntrevistas2', 'Sala', 'Despacho para entrevistas planta 1', 1, 2, 0),
+(10, 'SalonDeActos', 'Sala', 'Salon de actos', 3, 2, 0),
+(11, 'SalaDeReuniones', 'Sala', 'Sala de reuniones', 1, 2, 0),
+(12, 'Proyector1', 'Proyector', 'Proyector blanco', 3, 2, 0),
+(13, 'Proyector2', 'Proyector', 'Proyector negro', 2, 2, 0),
+(14, 'Portatil1', 'Portatil', 'Portatil marca HP', 1, 2, 0),
+(15, 'Portatil2', 'Portatil', 'Portatil marca Asus', 2, 2, 0),
+(16, 'Portatil3', 'Portatil', 'Portatil marca Lenovo', 3, 2, 0),
+(17, 'Móvil1', 'Móvil', 'Teléfono móvil IOS', 1, 2, 0),
+(18, 'Móvil2', 'Móvil', 'Teléfono móvil Android', 3, 2, 0);
 
 -- --------------------------------------------------------
 
@@ -92,9 +90,27 @@ CREATE TABLE `pedidos` (
   `hora_inicio_Pedidos` varchar(5) NOT NULL,
   `fecha_final_Pedidos` date DEFAULT NULL,
   `hora_final_Pedidos` varchar(5) DEFAULT NULL,
-  `inventario_Pedidos` int(10) NOT NULL,
-  `personal_Pedidos` int(10) NOT NULL
+  `inventario_Pedidos` int(2) NOT NULL,
+  `personal_Pedidos` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `pedidos`
+--
+
+INSERT INTO `pedidos` (`id_Pedidos`, `nombre_Pedidos`, `fecha_inicio_Pedidos`, `hora_inicio_Pedidos`, `fecha_final_Pedidos`, `hora_final_Pedidos`, `inventario_Pedidos`, `personal_Pedidos`) VALUES
+(10, 'Portatil1', '2019-11-06', '18:08', '2019-11-06', '18:17', 14, 1),
+(11, 'Portatil1', '2019-11-06', '18:08', '2019-11-06', '18:17', 14, 1),
+(12, 'Portatil2', '2019-11-06', '18:08', '2019-11-06', '18:34', 15, 1),
+(13, 'Portatil3', '2019-11-06', '18:08', NULL, NULL, 16, 1),
+(14, 'DespachoEntrevistas1', '2019-11-06', '18:12', '2019-11-06', '18:18', 8, 1),
+(15, 'SalaInformatica1', '2019-11-06', '18:12', NULL, NULL, 5, 1),
+(16, 'SalaMultidisciplinar4', '2019-11-06', '18:12', '2019-11-06', '18:34', 4, 1),
+(17, 'Proyector2', '2019-11-06', '18:17', '2019-11-06', '18:18', 13, 1),
+(22, 'SalaMultidisciplinar4', '2019-11-06', '18:34', '2019-11-06', '18:34', 4, 1),
+(23, 'SalaInformatica2', '2019-11-06', '18:34', NULL, NULL, 6, 1),
+(24, 'SalaMultidisciplinar1', '2019-11-06', '19:36', '2019-11-06', '19:36', 1, 1),
+(25, 'DespachoEntrevistas1', '2019-11-06', '19:36', NULL, NULL, 8, 1);
 
 -- --------------------------------------------------------
 
@@ -103,7 +119,7 @@ CREATE TABLE `pedidos` (
 --
 
 CREATE TABLE `personal` (
-  `id_Personal` int(10) NOT NULL,
+  `id_Personal` int(1) NOT NULL,
   `usuario_Personal` varchar(20) NOT NULL,
   `contrasena_Personal` varchar(250) NOT NULL,
   `nombre_Personal` varchar(25) NOT NULL
@@ -120,43 +136,21 @@ INSERT INTO `personal` (`id_Personal`, `usuario_Personal`, `contrasena_Personal`
 (4, 'dani', '6e7a0c9b49cadd9228f1170dbf7dff94', 'Daniel Sánchez'),
 (5, 'jose', '90e528618534d005b1a7e7b7a367813f', 'José Antonio');
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `reserva`
---
-
-CREATE TABLE `reserva` (
-  `id_Reserva` int(10) NOT NULL,
-  `estado_Reserva` varchar(2) NOT NULL,
-  `descripcion_Estado` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `reserva`
---
-
-INSERT INTO `reserva` (`id_Reserva`, `estado_Reserva`, `descripcion_Estado`) VALUES
-(1, 'Si', 'Este artículo está reservado.'),
-(2, 'No', 'Este artículo no está reservado');
-
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `estado`
+-- Indices de la tabla `incidencias`
 --
-ALTER TABLE `estado`
-  ADD PRIMARY KEY (`id_Estado`);
+ALTER TABLE `incidencias`
+  ADD PRIMARY KEY (`id_Incidencia`);
 
 --
 -- Indices de la tabla `inventario`
 --
 ALTER TABLE `inventario`
-  ADD PRIMARY KEY (`id_Inventario`),
-  ADD KEY `estado_Inventario` (`estado_Inventario`),
-  ADD KEY `reservado_Inventario` (`reservado_Inventario`);
+  ADD PRIMARY KEY (`id_Inventario`);
 
 --
 -- Indices de la tabla `pedidos`
@@ -173,55 +167,36 @@ ALTER TABLE `personal`
   ADD PRIMARY KEY (`id_Personal`);
 
 --
--- Indices de la tabla `reserva`
---
-ALTER TABLE `reserva`
-  ADD PRIMARY KEY (`id_Reserva`);
-
---
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT de la tabla `estado`
+-- AUTO_INCREMENT de la tabla `incidencias`
 --
-ALTER TABLE `estado`
-  MODIFY `id_Estado` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `incidencias`
+  MODIFY `id_Incidencia` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `inventario`
 --
 ALTER TABLE `inventario`
-  MODIFY `id_Inventario` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_Inventario` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `id_Pedidos` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Pedidos` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `personal`
 --
 ALTER TABLE `personal`
-  MODIFY `id_Personal` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT de la tabla `reserva`
---
-ALTER TABLE `reserva`
-  MODIFY `id_Reserva` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_Personal` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas
 --
-
---
--- Filtros para la tabla `inventario`
---
-ALTER TABLE `inventario`
-  ADD CONSTRAINT `inventario_ibfk_1` FOREIGN KEY (`estado_Inventario`) REFERENCES `estado` (`id_Estado`),
-  ADD CONSTRAINT `inventario_ibfk_2` FOREIGN KEY (`reservado_Inventario`) REFERENCES `reserva` (`id_Reserva`);
 
 --
 -- Filtros para la tabla `pedidos`
