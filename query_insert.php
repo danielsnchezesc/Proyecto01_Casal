@@ -1,4 +1,8 @@
 <?php
+	session_start();
+	if (!isset($_SESSION['login_user'])) {
+		header("location:login.php");
+	}
 //Insertar los datos del pedido
 $sql = "INSERT INTO pedidos (nombre_Pedidos, fecha_inicio_Pedidos, hora_inicio_Pedidos, inventario_Pedidos, personal_Pedidos) VALUES 
 ('$nombre', '$fecha', '$hora', '$inventario', '$usuario')";

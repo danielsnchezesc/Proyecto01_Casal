@@ -1,4 +1,8 @@
 <?php
+	session_start();
+	if (!isset($_SESSION['login_user'])) {
+		header("location:login.php");
+	}
 include "conexion.php";
 $id=$_REQUEST['opcion'];
 //Marcar un producto como estropeado

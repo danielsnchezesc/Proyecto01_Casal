@@ -6,7 +6,10 @@
 <body>
 	<?php
 		include "conexion.php";
-		session_start();
+			session_start();
+	if (!isset($_SESSION['login_user'])) {
+		header("location:login.php");
+	}
 		$user=($_SESSION['login_user']);
 		$userid="select id_personal from personal where usuario_Personal = '$user'";
 		$usuarioid=mysqli_query($conn,$userid);

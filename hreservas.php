@@ -9,7 +9,6 @@
 	<a href="index.php">Volver a inicio</a><br><br>
 <?php
 	session_start();
-	$id=($_SESSION['id']);
 	if (!isset($_SESSION['login_user'])) {
 		header("location:login.php");
 	}

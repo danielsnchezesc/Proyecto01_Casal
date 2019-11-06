@@ -1,6 +1,11 @@
 
 <?php
 
+	session_start();
+	if (!isset($_SESSION['login_user'])) {
+		header("location:login.php");
+	}
+
 include "conexion.php";
 
 $consulta="select nombre_Inventario,estado_inventario,reservado_Inventario from inventario where tipo_inventario='Movil'";

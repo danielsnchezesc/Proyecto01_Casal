@@ -1,4 +1,8 @@
 <?php
+	session_start();
+	if (!isset($_SESSION['login_user'])) {
+		header("location:login.php");
+	}
 include "conexion.php";
 $user=($_SESSION['login_user']);
 $id=($_SESSION['id']);

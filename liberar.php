@@ -6,7 +6,10 @@
 <body>
 	<?php
 		include "conexion.php";
-		session_start();
+			session_start();
+	if (!isset($_SESSION['login_user'])) {
+		header("location:login.php");
+	}
 		$id=($_SESSION['id']);
 		$objeto=($_GET['inventario']);
 		echo $objeto;

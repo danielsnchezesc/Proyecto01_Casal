@@ -1,4 +1,8 @@
 <?php
+	session_start();
+	if (!isset($_SESSION['login_user'])) {
+		header("location:login.php");
+	}
 include "conexion.php";
 $z= "SELECT * FROM inventario WHERE estado_Inventario='3'";
 $resultado =mysqli_query($conn, $z);

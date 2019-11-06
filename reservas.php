@@ -7,7 +7,10 @@
 </head>
 <body>
 <?php
-session_start();
+	session_start();
+	if (!isset($_SESSION['login_user'])) {
+		header("location:login.php");
+	}
 include "reserva_salas.php";
 echo "<br>";
 include "reserva_moviles.php";
