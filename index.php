@@ -37,24 +37,38 @@
 	</div>
 	<br>
 	<div id="main">
-		<div><a href="">Selecionar Recursos</a></div>
+		<div>Seleccionar Recursos</div>
 	</div>
-	<div id="recursos">
-		<a href="">Salas</a>
+	<div id="recursos"><br>
+		Salas<br><br>
 		<div>
 			<?php 
 			include "salas.php";
+			echo "<br>";
 			?>
 		</div>
-		<a href="">Dispositivos</a>
-			<?php
+		Moviles<br><br>
+		<div>
+			<?php 
 			include "moviles.php";
 			echo "<br>";
+			?>
+		</div>
+		Portatiles<br><br>
+		<div>
+			<?php 
 			include "portatiles.php";
 			echo "<br>";
-			include "proyectores.php";
 			?>
-	</div>
+		</div>
+		Proyectores<br><br>
+		<div>
+			<?php 
+			include "proyectores.php";
+			echo "<br>";
+			?>
+		</div>
+	</div><br>
 </body>
 </html>
 
