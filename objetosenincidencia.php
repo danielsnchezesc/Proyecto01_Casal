@@ -8,6 +8,11 @@
 <body>
 <?php
 	include "conexion.php";
+	session_start();
+	$id=($_SESSION['id']);
+	if (!isset($_SESSION['login_user'])) {
+		header("location:login.php");
+	}
 	$consulta="Select nombre_Inventario from inventario where estado_Inventario='3'";
 	$var=mysqli_query($conn,$consulta);
 	while ($array=mysqli_fetch_array($var)) {

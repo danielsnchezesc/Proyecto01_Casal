@@ -8,6 +8,11 @@
 <body>
 	<a href="index.php">Volver a inicio</a><br><br>
 <?php
+	session_start();
+	$id=($_SESSION['id']);
+	if (!isset($_SESSION['login_user'])) {
+		header("location:login.php");
+	}
 	include "conexion.php";
 	$consulta="Select nombre_Pedidos,fecha_inicio_Pedidos,hora_inicio_Pedidos,personal_Pedidos from pedidos";
 	$var=mysqli_query($conn,$consulta);
