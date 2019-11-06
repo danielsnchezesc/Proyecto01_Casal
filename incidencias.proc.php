@@ -15,6 +15,26 @@ $y = "UPDATE inventario SET descripcion_estado_Inventario='$descripcion' WHERE i
 mysqli_query($conn, $y);
 ?>
 
-<p>Se ha marcado como estropeado</p>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inicio</title>
+	<meta charset="utf-8">	
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
 
-<a href="incidencias.php">Volver</a>
+
+
+		<div class="contenedor">
+		<div class="is">
+	<h3>Se ha marcado como estropeado</h3><br>
+		</div><br>
+		<p style="margin-left: 35%;" class="mensaje" id="mensaje"></p>
+		<div class="form">
+		<a class="btnenviar" href="incidencias.php"> Volver</a>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -39,7 +39,7 @@
 	<div id="main">
 		<div>Seleccionar Recursos</div>
 	</div>
-	<div id="recursos"><br>
+	<div id="recursos">
 		Salas<br><br>
 		<div>
 			<?php 
@@ -71,4 +71,3 @@
 	</div><br>
 </body>
 </html>
-
