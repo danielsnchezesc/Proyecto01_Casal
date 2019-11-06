@@ -21,6 +21,7 @@
 	 		 <a href="objetosenincidencia.php">Objetos en Incidencia</a>
 	 		 <a href="hreservas.php">Historial de Reservas</a>
 	 		 <a href="incidencias.php">Incidencias</a>
+	 		 <a href="logout.proc.php">Cerrar sesion</a>
 		</div>
 
 		<div class="derecha">
