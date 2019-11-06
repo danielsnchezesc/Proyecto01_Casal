@@ -1,6 +1,6 @@
 <?php
 include "conexion.php";
-$consulta="select nombre_Inventario from inventario where reservado_Inventario='2' and tipo_Inventario='Movil'";
+$consulta="select nombre_Inventario from inventario where reservado_Inventario='2' and tipo_Inventario='Movil' and estado_Inventario!='3'";
 $exe=mysqli_query($conn,$consulta);
 while ($casos=mysqli_fetch_array($exe)) {
 	echo $casos[0];
