@@ -39,13 +39,39 @@ session_start();
 		header("location:login.php");
 	}
 $id=($_SESSION['id']);
-include "liberar_salas.php";
-echo "<br>";
-include "liberar_moviles.php";
-echo "<br>";
-include "liberar_portatil.php";
-echo "<br>";
-include "liberar_proyetor.php";
 ?>
+<div id="main">
+	<div><a href="">Selecionar Objeto a Devolver</a></div>
+</div>
+<div id="recursos3">
+<div class="recursos2">
+	Salas a devolver<br><br><br>
+	<?php
+	include "liberar_salas.php";
+	echo "<br>";
+	?>
+</div>
+<div class="recursos2">
+	Moviles a devolver<br><br><br>
+	<?php
+	include "liberar_moviles.php";
+	echo "<br>";
+	?>
+</div>
+<div class="recursos2">
+	Portatiles a devolver<br><br><br>
+	<?php
+	include "liberar_portatil.php";
+	echo "<br>";
+	?>
+</div>
+	<div class="recursos2">
+	Proyectores a devolver<br><br><br>
+	<?php
+	include "liberar_proyetor.php";
+	echo "<br>";
+	?>
+</div>
+</div>
 </body>
 </html>

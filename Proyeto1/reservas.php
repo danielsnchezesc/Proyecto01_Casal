@@ -37,13 +37,39 @@ session_start();
 	if (!isset($_SESSION['login_user'])) {
 		header("location:login.php");
 	}
-include "reserva_salas.php";
-echo "<br>";
-include "reserva_moviles.php";
-echo "<br>";
-include "reserva_portatil.php";
-echo "<br>";
-include "reserva_proyector.php";
 ?>
+<div id="main">
+	<div><a href="">Selecionar Reserva</a></div>
+</div>
+<div id="recursos4">
+<div class="recursos2">
+	Salas Disponibles<br><br><br>
+	<?php
+	include "reserva_salas.php";
+	echo "<br>";
+	?>
+</div>
+<div class="recursos2">
+	Moviles Disponibles<br><br><br>
+	<?php
+	include "reserva_moviles.php";
+	echo "<br>";
+	?>
+</div>
+<div class="recursos2">
+	Portatiles Disponibles<br><br><br>
+	<?php
+	include "reserva_portatil.php";
+	echo "<br>";
+	?>
+</div>
+	<div class="recursos2">
+	Proyectores Disponibles<br><br><br>
+	<?php
+	include "reserva_proyector.php";
+	echo "<br>";
+	?>
+</div>
+</div>
 </body>
 </html>

@@ -39,6 +39,12 @@ session_start();
 	if (!isset($_SESSION['login_user'])) {
 		header("location:login.php");
 	}
+	?>
+	<div id="main">
+	<div><a href="">Historial de Incidencias</a></div>
+	</div>
+	<div id="recursos4">
+	<?php
 	$consulta="SELECT inventario.nombre_Inventario,incidencias.descripcion_Incidencia,incidencias.fecha_inicio_Incidencia,incidencias.fecha_fin_Incidencia,incidencias.hora_inicio_Incidencia,incidencias.hora_fin_Incidencia FROM incidencias inner join inventario on inventario.id_Inventario=incidencias.objeto_Incidencia";
 	$var=mysqli_query($conn,$consulta);
 	while ($array=mysqli_fetch_array($var)) {
@@ -56,5 +62,6 @@ session_start();
 		}
 	}
 ?>
+</div>
 </body>
 </html>

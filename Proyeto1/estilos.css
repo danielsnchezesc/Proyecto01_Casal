@@ -121,7 +121,39 @@ body {
   text-align: center;
   padding: 1.5% 5px 400px 5px;
   box-shadow: 9px 10px 11px -8px rgba(0,0,0,0.56);
-
+}
+#recursos3{
+  background-color: #fafafa;
+  margin: 1rem;
+  padding: 10rem;
+  border: 2px solid #ccc;
+  text-align: center;
+  padding: 1.5% 5px 400px 5px;
+  box-shadow: 9px 10px 11px -8px rgba(0,0,0,0.56);
+  height: 100px;
+}
+#recursos4{
+  background-color: #fafafa;
+  margin: 1rem;
+  padding: 10rem;
+  border: 2px solid #ccc;
+  text-align: center;
+  padding: 1.5% 5px 400px 5px;
+  box-shadow: 9px 10px 11px -8px rgba(0,0,0,0.56);
+  height: 100px;
+  overflow: scroll;
+}
+.recursos2{
+  border-radius: 5px;
+  background-color: #fafafa;
+  margin: 1rem;
+  padding: 10rem;
+  border: 2px solid #ccc;
+  text-align: center;
+  padding: 1.5% 5px 25px 5px;
+  box-shadow: 9px 10px 11px -8px rgba(0,0,0,0.56);
+  width: 25%;
+  float: left;
 
 }
 
