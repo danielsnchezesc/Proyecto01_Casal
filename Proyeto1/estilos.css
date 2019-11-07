@@ -219,3 +219,15 @@ body {
   border: 2px solid #ccc;
   border-radius: 5px;       
 }
+
+.green{
+  color: green;
+}
+
+.red{
+  color: red;
+}
+
+.yellow{
+  color: #f5bd05;
+}
