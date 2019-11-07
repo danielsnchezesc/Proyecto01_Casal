@@ -25,7 +25,7 @@ mysqli_query($conn, $consulta3);
 		</div><br>
 		<p style="margin-left: 35%;" class="mensaje" id="mensaje"></p>
 		<div class="form">
-		<a class="btnenviar" href="reservas.php"> Volver</a>
+		<a class="btnenviar" href="incidencias.php"> Volver</a>
 		</div>
 	</div>
 </body>
