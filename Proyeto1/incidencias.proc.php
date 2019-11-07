@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
 <?php
 include "conexion.php";
 $id=$_REQUEST['opcion'];
@@ -12,5 +19,15 @@ $hora = date("H:i");
 $consulta3="insert into incidencias (fecha_inicio_Incidencia,hora_inicio_Incidencia,descripcion_Incidencia,objeto_Incidencia,estado) values ('$today','$hora','$descripcion','$id','1')";
 mysqli_query($conn, $consulta3);
 ?>
-<p>Se ha marcado como estropeado</p>
-<a href="incidencias.php">Volver</a>
+	<div class="contenedor">
+		<div class="is">
+	<h3>Reserva completada</h3><br>
+		</div><br>
+		<p style="margin-left: 35%;" class="mensaje" id="mensaje"></p>
+		<div class="form">
+		<a class="btnenviar" href="reservas.php"> Volver</a>
+		</div>
+	</div>
+</body>
+</html>
+
