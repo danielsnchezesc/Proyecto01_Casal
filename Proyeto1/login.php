@@ -10,6 +10,15 @@
 	<div class="contenedor">
 		<div class="is">
 		<h3>Iniciar Sesión</h3>
+					<?php
+			if (isset($_GET['log'])) {
+				?>
+				<script type="text/javascript">
+					alert("El usuario es incorrecto");
+				</script>
+				<?php
+			}
+			?>
 		</div><br>
 		<p style="margin-left: 35%;" class="mensaje" id="mensaje"></p>
 		<div class="form">
