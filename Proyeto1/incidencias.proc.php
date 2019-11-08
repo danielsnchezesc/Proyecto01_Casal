@@ -21,7 +21,7 @@ mysqli_query($conn, $consulta3);
 ?>
 	<div class="contenedor">
 		<div class="is">
-	<h3>Reserva completada</h3><br>
+	<h3>Incidencia Registrada</h3><br>
 		</div><br>
 		<p style="margin-left: 35%;" class="mensaje" id="mensaje"></p>
 		<div class="form">
