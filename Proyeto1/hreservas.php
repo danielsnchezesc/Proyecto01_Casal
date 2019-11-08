@@ -57,7 +57,11 @@ session_start();
 					$hf=$array[6];
 					echo "Objeto: ".$objeto."<br>";
 					echo "Fecha y hora inicio de reserva: ".$fi." a las ". $hi."<br>";
-					echo "Fecha y hora fin de reserva: ".$ff." a las ". $hf."<br>";
+					if (is_null($hf)) {
+						echo"Reserva activa<br>";
+					}else{
+						echo "Fecha y hora fin de reserva: ".$ff." a las ". $hf."<br>";
+					}
 					echo "Reserva hecha por: ".$user."<br><br>";
 					}
 				?>

@@ -12,10 +12,10 @@ session_start();
 ?>
 <div class="general">
 	 	<div id="menu">
-	 		 <a href="index.php">Informacion Inventario</a>
+	 		 <a class="active" href="index.php">Informacion Inventario</a>
 	 		 <a href="reservas.php">Reservar</a>
 	 		 <a href="liberarecursos.php">Liberar Recursos</a>
-	 		 <a  class="active"  href="objetosenincidencia.php">Objetos en Incidencia</a>
+	 		 <a href="objetosenincidencia.php">Objetos en Incidencia</a>
 	 		 <a href="hreservas.php">Historial de Reservas</a>
 	 		 <a href="incidencias.php">Incidencias</a>
 	 		 <a href="logout.proc.php">Cerrar sesion</a>

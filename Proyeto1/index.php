@@ -12,8 +12,8 @@
 	if (!isset($_SESSION['login_user'])) {
 		header("location:login.php");
 	}
-	?>
-	<div class="general">
+	?> 
+	<div class="general"> 
 	 	<div id="menu">
 	 		 <a class="active" href="index.php">Informacion Inventario</a>
 	 		 <a href="reservas.php">Reservar</a>
@@ -39,36 +39,57 @@
 	<div id="main">
 		<div>Seleccionar Recursos</div>
 	</div>
-	<div id="recursos"><br>
-		Salas<br><br>
-		<div>
+	<div id="recursos"><br> 
+
+		<div class="titulo">
+			<div class="subtitulos"><a href="#salas">Salas</a></div>
+			<div class="subtitulos"><a href="#moviles">Moviles</a></div>
+			<div class="subtitulos"><a href="#portatiles">Portatiles</a></div>
+			<div class="subtitulos"><a href="#proyectores">Proyectores</a></div>
+		</div>
+		<br>
+			<a name='salas' id='salas'></a>
+			<div class="salas">
 			<?php 
+
+			echo "<br>";
 			include "salas.php";
 			echo "<br>";
 			?>
 		</div>
-		Moviles<br><br>
-		<div>
+		<br><br>
+		<a name='moviles' id='moviles'></a>
+		<div class="moviles">
 			<?php 
+			echo "<br>";
 			include "moviles.php";
 			echo "<br>";
 			?>
 		</div>
-		Portatiles<br><br>
-		<div>
+		<br><br>
+		<a name='portatiles' id='portatiles'></a>
+		<div class="portatiles">
 			<?php 
+			echo "<br>";
 			include "portatiles.php";
 			echo "<br>";
 			?>
 		</div>
-		Proyectores<br><br>
-		<div>
+		<br><br>
+		<a name='proyectores' id='proyectores'></a>
+		<div class="proyectores">
 			<?php 
+			echo "<br>";
 			include "proyectores.php";
 			echo "<br>";
 			?>
 		</div>
 	</div><br>
+
+	<footer class="footer">
+		<div class=""><a href="https://danielsnchezesc.github.io/Proyecto01_Casal/
+">Página de Presentación</a></div>
+	</footer>	
 </body>
 </html>
 

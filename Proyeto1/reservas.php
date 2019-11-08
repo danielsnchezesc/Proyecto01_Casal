@@ -29,9 +29,9 @@ session_start();
 		    echo "<a class='sesion' href=''>Bienvenido $casos[0]</a><br>";
 			}	
 		    ?>
-		</div><br>
+		</div>
 </div>
-<br><br>
+<br>
 <?php
 	$id=($_SESSION['id']);
 	if (!isset($_SESSION['login_user'])) {
@@ -41,35 +41,43 @@ session_start();
 <div id="main">
 	<div><a href="">Selecionar Reserva</a></div>
 </div>
-<div id="recursos4">
-<div class="recursos2">
-	Salas Disponibles<br><br><br>
+<div id="recursos">
+	<div class="titulo">
+			<div class="subtitulos"><a href="#salas">Salas</a></div>
+			<div class="subtitulos"><a href="#moviles">Moviles</a></div>
+			<div class="subtitulos"><a href="#portatiles">Portatiles</a></div>
+			<div class="subtitulos"><a href="#proyectores">Proyectores</a></div>
+		</div>
+		<br>
+		
+	<a name='salas' id='salas'></a>
+	<div class="salas">
 	<?php
 	include "reserva_salas.php";
 	echo "<br>";
 	?>
-</div>
-<div class="recursos2">
-	Moviles Disponibles<br><br><br>
-	<?php
-	include "reserva_moviles.php";
-	echo "<br>";
-	?>
-</div>
-<div class="recursos2">
-	Portatiles Disponibles<br><br><br>
-	<?php
-	include "reserva_portatil.php";
-	echo "<br>";
-	?>
-</div>
-	<div class="recursos2">
-	Proyectores Disponibles<br><br><br>
+	</div>
+	<a name='moviles' id='moviles'></a>
+	<div class="moviles">
+		<?php
+		include "reserva_moviles.php";
+		echo "<br>";
+		?>
+	</div>
+	<a name='portatiles' id='portatiles'></a>
+	<div class="portatiles">
+		<?php
+		include "reserva_portatil.php";
+		echo "<br>";
+		?>
+	</div>
+	<a name='proyectores' id='proyectores'></a>
+	<div class="proyectores">
 	<?php
 	include "reserva_proyector.php";
 	echo "<br>";
 	?>
-</div>
+	</div>
 </div>
 </body>
 </html>

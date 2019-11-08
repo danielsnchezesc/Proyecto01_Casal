@@ -15,8 +15,13 @@ include "conexion.php";
 $consulta="select descripcion_Inventario,estado_inventario,reservado_Inventario from inventario where tipo_inventario='Sala'";
 
 $exe=mysqli_query($conn,$consulta);
+?>
+<table class="ancho">
+	
+<?php
 
 while ($casos=mysqli_fetch_array($exe)) {
+	echo "<tr>";
 
 	if ($casos[2]=="1") {
 		$reserva="En uso";
@@ -38,14 +43,13 @@ while ($casos=mysqli_fetch_array($exe)) {
 		$color2="red";
 		
 	}
-
-	echo $casos[0]." | Estado: <span class='".$color1."''>".$estado."</span> | Disponibilidad: <span class='".$color2."'>".$reserva."</span>";
-
-	echo "<br>";
+	echo "<td class='centrartabla'>".$casos[0]."</td> <td class='centrartabla'> Estado: <span class='".$color1."''>".$estado."</span> </td> <td class='centrartabla'> Disponibilidad: <span class='".$color2."'>".$reserva."</span></td><br>";
 
 }
-
+ echo "<tr>";
 ?>
+</table>
+
 
 </body>
 </html>

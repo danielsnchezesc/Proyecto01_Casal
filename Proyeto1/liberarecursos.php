@@ -30,9 +30,9 @@ session_start();
 		    echo "<a class='sesion' href=''>Bienvenido $casos[0]</a><br>";
 			}	
 		    ?>
-		</div><br>
+		</div>
 </div>
-<br><br>
+<br>
 <?php
 	$id=($_SESSION['id']);
 	if (!isset($_SESSION['login_user'])) {
@@ -40,38 +40,55 @@ session_start();
 	}
 $id=($_SESSION['id']);
 ?>
-<div id="main">
-	<div><a href="">Selecionar Objeto a Devolver</a></div>
-</div>
-<div id="recursos3">
-<div class="recursos2">
-	Salas a devolver<br><br><br>
-	<?php
-	include "liberar_salas.php";
-	echo "<br>";
-	?>
-</div>
-<div class="recursos2">
-	Moviles a devolver<br><br><br>
-	<?php
-	include "liberar_moviles.php";
-	echo "<br>";
-	?>
-</div>
-<div class="recursos2">
-	Portatiles a devolver<br><br><br>
-	<?php
-	include "liberar_portatil.php";
-	echo "<br>";
-	?>
-</div>
-	<div class="recursos2">
-	Proyectores a devolver<br><br><br>
-	<?php
-	include "liberar_proyetor.php";
-	echo "<br>";
-	?>
-</div>
-</div>
+	<div id="main">
+		<div>Seleccionar Recursos</div>
+	</div>
+	<div id="recursos"><br> 
+
+		<div class="titulo">
+			<div class="subtitulos"><a href="#salas">Salas</a></div>
+			<div class="subtitulos"><a href="#moviles">Moviles</a></div>
+			<div class="subtitulos"><a href="#portatiles">Portatiles</a></div>
+			<div class="subtitulos"><a href="#proyectores">Proyectores</a></div>
+		</div>
+		<br>
+			<a name='salas' id='salas'></a>
+			<div class="salas">
+			<?php 
+
+			echo "<br>";
+			include "liberar_salas.php";
+			echo "<br>";
+			?>
+		</div>
+		<br><br>
+		<a name='moviles' id='moviles'></a>
+		<div class="moviles">
+			<?php 
+			echo "<br>";
+			include "liberar_moviles.php";
+			echo "<br>";
+			?>
+		</div>
+		<br><br>
+		<a name='portatiles' id='portatiles'></a>
+		<div class="portatiles">
+			<?php 
+			echo "<br>";
+			include "liberar_portatil.php";
+			echo "<br>";
+			?>
+		</div>
+		<br><br>
+		<a name='proyectores' id='proyectores'></a>
+		<div class="proyectores">
+			<?php 
+			echo "<br>";
+			include "liberar_proyetor.php";
+
+			echo "<br>";
+			?>
+		</div>
+	</div><br>
 </body>
 </html>

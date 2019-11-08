@@ -1,4 +1,6 @@
 body {
+  background: url(bg.PNG) no-repeat center center fixed;
+  background-size: cover;
   margin: 0;
   font-size: 28px;
   font-family: Arial, Helvetica, sans-serif;
@@ -6,7 +8,6 @@ body {
 
 
 /*-------------Menu-----------------*/
-
 
 .header {
   background-color: #f1f1f1;
@@ -16,14 +17,15 @@ body {
 
 .general{
     box-shadow: 0px 10px 11px -8px rgba(0,0,0,0.56);
-    
+      border-radius: 5px;
+
 }
 
 #menu {
 
   overflow: hidden;
   background-color: #333;
-  width: 85%;
+  width: 80%;
   height: 30px;
   float: left;
 }
@@ -39,10 +41,12 @@ body {
 }
 
 .derecha{
-/*  width: 20%;
-*/  height: 30px;
+  width: 20%;
+  height: 30px;
   background-color: red;
   float: left;
+  text-align: center;
+
 
 }
 
@@ -101,6 +105,7 @@ body {
   border: 2px solid #ccc;
   text-align: center;
   box-shadow: 9px 10px 11px -8px rgba(0,0,0,0.56);
+  border-radius: 5px;
 
 
 }
@@ -119,8 +124,10 @@ body {
   padding: 10rem;
   border: 2px solid #ccc;
   text-align: center;
-  padding: 1.5% 5px 400px 5px;
+  padding: 1.5% 5px 50px 5px;
   box-shadow: 9px 10px 11px -8px rgba(0,0,0,0.56);
+  border-radius: 5px;
+
 }
 #recursos3{
   background-color: #fafafa;
@@ -221,6 +228,69 @@ body {
 }
 
 
+/*----------------Index---------------------*/
+
+.titulo{
+  height:85px; 
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  padding:  15px 15px 15px 15px  ;
+
+
+
+}
+
+.subtitulos{
+      text-align: center;
+      width: 25%;   
+}
+
+/*.centrar{
+  width: 100%
+  height:85px;
+}*/
+
+.salas{
+  height:auto; 
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.moviles{
+  height:auto; 
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.portatiles{
+  height:auto; 
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.proyectores{
+  height:auto; 
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
 .green{
   color: green;
 }
@@ -231,4 +301,25 @@ body {
 
 .yellow{
   color: #f5bd05;
+}
+
+.centrartabla{
+  /*text-align: justify-all;*/
+  width: auto;
+}
+
+.ancho{
+    width: 1000px;
+    /*text-align: left;*/
+}
+
+.footer{
+  background-color: red;
+  height: 
+}
+
+table{
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  padding:  15px 15px 15px 15px  ;
 }
