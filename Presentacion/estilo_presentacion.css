@@ -1,0 +1,81 @@
+body {
+	background: url("fondo.png") no-repeat center center fixed;
+	/**background-color: #52FEFD;**/
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin:0;
+	margin-bottom: 10px;
+}
+
+h1 {
+	font-family: "Segoe UI";
+}
+
+p {
+	text-align: justify;
+	margin-left: 5%;
+	margin-right: 5%;
+	font-family: "Segoe UI";
+}
+
+h2 {
+	font-family: "Segoe UI";
+}
+
+h3 {
+	font-family: "Segoe UI";
+}
+
+#juanma {
+	margin-left: -50%;
+}
+#dani {
+	margin-left: 50%;
+	margin-top: -31%;
+}
+#jose {
+	margin-left: -50%;
+}
+#carlos{
+	margin-left: 50%;
+	margin-top: -32%;
+}
+
+#j1{
+	width:170px;
+    height:170px;
+    border-radius:150px;
+    border:10px solid #666;
+    margin-left: -50%;
+}
+
+#d2{
+	width:170px;
+    height:170px;
+    border-radius:150px;
+    border:10px solid #666;
+    margin-left: 50%;
+}
+
+#c4{
+	width:170px;
+    height:170px;
+    border-radius:150px;
+    border:10px solid #666;
+    margin-left: 50%;
+}
+
+#herramientas{
+	width: 90%;
+	height: 100%;
+}
+
+#contenido {
+	background-color: white;
+	margin-left: 30%;
+	margin-right: 30%;
+	text-align: center;
+	border-radius: 20px;
+}
