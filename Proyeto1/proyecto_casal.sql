@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-11-2019 a las 18:03:17
+-- Tiempo de generación: 08-11-2019 a las 18:10:57
 -- Versión del servidor: 10.1.31-MariaDB
 -- Versión de PHP: 7.2.3
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE database proyecto_casal;
+
 CREATE TABLE `incidencias` (
   `id_Incidencia` int(10) NOT NULL,
   `fecha_inicio_Incidencia` date NOT NULL,
@@ -39,6 +40,13 @@ CREATE TABLE `incidencias` (
   `objeto_Incidencia` int(2) NOT NULL,
   `estado` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `incidencias`
+--
+
+INSERT INTO `incidencias` (`id_Incidencia`, `fecha_inicio_Incidencia`, `fecha_fin_Incidencia`, `hora_inicio_Incidencia`, `hora_fin_Incidencia`, `descripcion_Incidencia`, `objeto_Incidencia`, `estado`) VALUES
+(32, '2019-11-08', '2019-11-08', '18:07', '18:08', 'ujk', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -60,10 +68,10 @@ CREATE TABLE `inventario` (
 --
 
 INSERT INTO `inventario` (`id_Inventario`, `nombre_Inventario`, `tipo_Inventario`, `descripcion_Inventario`, `estado_Inventario`, `reservado_Inventario`) VALUES
-(1, 'SalaMultidisciplinar1', 'Sala', 'Sala multidisciplinar planta 0', 3, 2),
+(1, 'SalaMultidisciplinar1', 'Sala', 'Sala multidisciplinar planta 0', 1, 2),
 (2, 'SalaMultidisciplinar2', 'Sala', 'Sala multidisciplinar planta 1', 1, 2),
-(3, 'SalaMultidisciplinar3', 'Sala', 'Sala multidisciplinar planta 2', 3, 1),
-(4, 'SalaMultidisciplinar4', 'Sala', 'Sala multidisciplinar planta 3', 1, 1),
+(3, 'SalaMultidisciplinar3', 'Sala', 'Sala multidisciplinar planta 2', 1, 2),
+(4, 'SalaMultidisciplinar4', 'Sala', 'Sala multidisciplinar planta 3', 1, 2),
 (5, 'SalaInformatica1', 'Sala', 'Sala informatica principal', 1, 2),
 (6, 'SalaInformatica2', 'Sala', 'Sala informatica planta 2', 1, 2),
 (7, 'TallerCocina', 'Sala', 'Taller de cocina', 1, 2),
@@ -71,12 +79,12 @@ INSERT INTO `inventario` (`id_Inventario`, `nombre_Inventario`, `tipo_Inventario
 (9, 'DespachoEntrevistas2', 'Sala', 'Despacho para entrevistas planta 1', 1, 2),
 (10, 'SalonDeActos', 'Sala', 'Salon de actos', 1, 2),
 (11, 'SalaDeReuniones', 'Sala', 'Sala de reuniones', 1, 2),
-(12, 'Proyector1', 'Proyector', 'Proyector blanco', 1, 1),
+(12, 'Proyector1', 'Proyector', 'Proyector blanco', 1, 2),
 (13, 'Proyector2', 'Proyector', 'Proyector negro', 1, 2),
-(14, 'Portatil1', 'Portatil', 'Portatil marca HP', 1, 1),
+(14, 'Portatil1', 'Portatil', 'Portatil marca HP', 1, 2),
 (15, 'Portatil2', 'Portatil', 'Portatil marca Asus', 1, 2),
-(16, 'Portatil3', 'Portatil', 'Portatil marca Lenovo', 3, 1),
-(17, 'Movil1', 'Movil', 'Telefono movil IOS', 1, 1),
+(16, 'Portatil3', 'Portatil', 'Portatil marca Lenovo', 1, 2),
+(17, 'Movil1', 'Movil', 'Telefono movil IOS', 1, 2),
 (18, 'Movil2', 'Movil', 'Telefono movil Android', 1, 2);
 
 -- --------------------------------------------------------
@@ -159,7 +167,7 @@ ALTER TABLE `personal`
 -- AUTO_INCREMENT de la tabla `incidencias`
 --
 ALTER TABLE `incidencias`
-  MODIFY `id_Incidencia` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id_Incidencia` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT de la tabla `inventario`
