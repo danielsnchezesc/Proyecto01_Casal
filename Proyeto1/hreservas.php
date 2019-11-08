@@ -46,15 +46,19 @@ session_start();
 		<div>
 			<?php
 				include "conexion.php";
-				$consulta="SELECT pedidos.nombre_Pedidos,pedidos.fecha_inicio_Pedidos,pedidos.hora_inicio_Pedidos,pedidos.personal_Pedidos, personal.nombre_Personal from pedidos INNER JOIN personal ON personal.id_personal=pedidos.personal_Pedidos";
+				$consulta="SELECT pedidos.nombre_Pedidos,pedidos.fecha_inicio_Pedidos,pedidos.hora_inicio_Pedidos,pedidos.personal_Pedidos, personal.nombre_Personal, pedidos.fecha_final_Pedidos,pedidos.hora_final_Pedidos from pedidos INNER JOIN personal ON personal.id_personal=pedidos.personal_Pedidos";
 					$var=mysqli_query($conn,$consulta);
 					while ($array=mysqli_fetch_array($var)) {
 					$objeto=$array[0];
 					$fi=$array[1];
 					$hi=$array[2];
 					$user=$array[4];
-					echo $objeto." se reservo el dia: ".$fi." a las ". $hi." por ".$user;
-					echo "<br>";
+					$ff=$array[5];
+					$hf=$array[6];
+					echo "Objeto: ".$objeto."<br>";
+					echo "Fecha y hora inicio de reserva: ".$fi." a las ". $hi."<br>";
+					echo "Fecha y hora fin de reserva: ".$ff." a las ". $hf."<br>";
+					echo "Reserva hecha por: ".$user."<br><br>";
 					}
 				?>
 		</div>
